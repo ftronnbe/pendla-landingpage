@@ -165,9 +165,73 @@
         }
 
         .feature-card .icon {
-            font-size: 2rem;
+            width: 32px;
+            height: 32px;
             margin-bottom: 16px;
             display: block;
+            color: var(--accent);
+        }
+
+        .feature-card .icon svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        /* Video */
+        .video-section {
+            padding: 0 24px 80px;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .video-section video {
+            width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .video-section .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .video-section .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+        }
+
+        /* Download */
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 32px;
+            padding: 12px 24px;
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 100px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .download-link:hover {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            text-decoration: none;
+        }
+
+        .download-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
         }
 
         .feature-card h3 {
@@ -356,6 +420,20 @@
         <p class="screenshot-label">Station search for every transit mode across Sweden</p>
     </section>
 
+    <!-- Video preview -->
+    <section class="video-section">
+        <h2 class="section-title">See it in action.</h2>
+        <p class="section-subtitle">A quick look at the Pendla experience.</p>
+        <video autoplay muted loop playsinline>
+            <source src="app_preview.mp4" type="video/mp4">
+        </video>
+        <br>
+        <a class="download-link" href="pendla-screenshots.zip" download>
+            <svg viewBox="0 0 24 24"><path d="M12 16.25a.75.75 0 0 1-.53-.22l-4.5-4.5a.75.75 0 1 1 1.06-1.06L11.25 13.69V3.75a.75.75 0 0 1 1.5 0v9.94l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-.53.22ZM4.75 19.25a.75.75 0 0 1 0-1.5h14.5a.75.75 0 0 1 0 1.5H4.75Z"/></svg>
+            Download all screenshots
+        </a>
+    </section>
+
     <!-- Features -->
     <section class="features">
         <h2 class="section-title">Built for every surface.</h2>
@@ -363,31 +441,31 @@
 
         <div class="feature-grid">
             <div class="feature-card">
-                <span class="icon" role="img" aria-label="Apple Watch">&#x231A;</span>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8ZM8 8a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8Zm4 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM9.5 2.5a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75Zm.5 19a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"/></svg></span>
                 <h3>Apple Watch</h3>
                 <p>Full SwiftUI Watch app with 4 complication families. Real-time countdown timers on every watch face — circular, rectangular, corner, and inline.</p>
             </div>
 
             <div class="feature-card">
-                <span class="icon" role="img" aria-label="Widgets">&#x25FB;&#xFE0F;</span>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5Zm9 0a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2V5ZM4 14a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3Zm9 0a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3Z"/></svg></span>
                 <h3>Home Screen & Lock Screen</h3>
                 <p>WidgetKit widgets in 5 sizes. Small and medium for the Home Screen, plus circular, rectangular, and inline for your Lock Screen and StandBy.</p>
             </div>
 
             <div class="feature-card">
-                <span class="icon" role="img" aria-label="Accessibility">&#x267F;</span>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm0 2.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5ZM9.5 11.5a.75.75 0 0 0-.53 1.28l2.28 2.28v3.19a.75.75 0 0 0 1.5 0v-3.19l2.28-2.28a.75.75 0 0 0-1.06-1.06L12 13.69l-1.97-1.97a.75.75 0 0 0-.53-.22Z"/></svg></span>
                 <h3>Accessible to everyone</h3>
                 <p>Full VoiceOver support with localized labels and hints across all surfaces. Dynamic Type. Every departure, delay, and cancellation is announced clearly.</p>
             </div>
 
             <div class="feature-card">
-                <span class="icon" role="img" aria-label="Location">&#x1F4CD;</span>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-7 5a7 7 0 1 1 14 0 7 7 0 0 1-14 0Zm7 7a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 19ZM19 12a.75.75 0 0 1 .75.75h1.5a.75.75 0 0 1 0-1.5h-1.5A.75.75 0 0 1 19 12ZM2.75 11.25a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5Z"/><path d="m12 5.5 1.3 6.2L12 13l-1.3-1.3L12 5.5Z"/></svg></span>
                 <h3>Location-aware</h3>
                 <p>Smart Core Location integration automatically surfaces your nearest station. Minimal location use — Always authorization only requested when widgets are active.</p>
             </div>
 
             <div class="feature-card">
-                <span class="icon" role="img" aria-label="Transit">&#x1F686;</span>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3C8.13 3 5 6.13 5 10v6l-1.29 1.29a1 1 0 0 0-.21.33V18a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-.38a1 1 0 0 0-.21-.33L18 16v-6c0-3.87-3.13-7-7-7Zm0-1.5a.75.75 0 0 1 .75.75V3.1a8.5 8.5 0 0 1 7.75 8.4v5.69l.78.78H2.72l.78-.78V11.5a8.5 8.5 0 0 1 7.75-8.4V2.25A.75.75 0 0 1 12 1.5ZM7 10h10v1H7v-1Zm1-3h8v1H8V7Z"/></svg></span>
                 <h3>Train, metro, and bus</h3>
                 <p>Real-time data from Trafikverket (national trains across all of Sweden) and SL (Stockholm metro and bus). All transit modes, one app.</p>
             </div>
